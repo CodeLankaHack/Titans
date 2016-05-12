@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Smart Wallet</title>
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Icons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <!-- Styles -->
+    <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+    <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="m-scene" id="main"> <!-- Main Container -->
+
+      <!-- Sidebars -->
+      <!-- Right Sidebar -->
+      <ul id="slide-out" class="side-nav">
+        <li class="sidenav-header">
+          <!-- Srearch bar -->
+          <nav class="transparent no-shadow">
+            <div class="nav-wrapper">
+              <form>
+                <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label for="search"><i class="ion-android-search"></i></label>
+                  <i class="ion-android-close"></i>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </li>
+        <!-- Tabs -->
+        <li>
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#sidebar1">Social</a></li>
+            <li class="tab col s3"><a href="#sidebar2">Chat</a></li>
+          </ul>
+        </li>
+        <li id="sidebar1" class="p-20">
+          <!-- Twitter -->
+          <div class="twitter">
+            <h6 class="follow-us"><i class="ion-social-twitter"></i> Follow us on Twitter</h6>
+            <div class="tweet">
+              <h3>@Codnauts</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="#">#tempor</a>.</p>
+            </div>
+            <div class="tweet">
+              <h3>@Codnauts</h3>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in <a href="#">#voluptate</a> culpa qui officia deserunt mollit anim.</p>
+            </div>
+            <div class="tweet">
+              <h3>@Codnauts</h3>
+              <p>At vero eos et accusamus et iusto odio <a href="#">#dignissimos</a> <a href="#">#ducimus</a> qui blanditiis praesentium.</p>
+            </div>
+          </div>
+          <!-- Facebook -->
+          <div class="facebook">
+            <h6 class="follow-us">Notifications</h6>
+            <div class="face-notification">
+              <img src="img/user2.jpg" alt="" class="cricle">
+              <div>
+                <p>Mike Green</p>
+                <span>Sent you a message</span>
+                <span class="small">Today at 16:48</span>
+              </div>
+            </div>
+            <div class="face-notification">
+              <img src="img/user.jpg" alt="" class="cricle">
+              <div>
+                <p>Lara Connors</p>
+                <span>Post a photo with you</span>
+                <span class="small">Today at 14:26</span>
+              </div>
+            </div>
+            <div class="face-notification">
+              <img src="img/user3.jpg" alt="" class="cricle">
+              <div>
+                <p>Mike Green</p>
+                <span>Post something...</span>
+                <span class="small">Yesterday at 03:19</span>
+              </div>
+            </div>
+          </div>
+
+        </li>
+        <li id="sidebar2" class="p-20">
+          <!-- Chat -->
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user.jpg" alt="" class="cricle">
+              <span class="dot green"></span>
+            </div>
+            <div class="chat-message">
+              <p>Mike Green</p>
+              <span>Sent you a message</span>
+              <span class="small">online</span>
+            </div>
+          </div>
+
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user2.jpg" alt="" class="cricle">
+              <span class="dot green"></span>
+            </div>
+            <div class="chat-message">
+              <p>Lora Bell</p>
+              <span>6 New messages</span>
+              <span class="small">online</span>
+            </div>
+          </div>
+
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user3.jpg" alt="" class="cricle">
+              <span class="dot orange"></span>
+            </div>
+            <div class="chat-message">
+              <p>Tony Lee</p>
+              <span>Away from keyboard.</span>
+              <span class="small">Away</span>
+            </div>
+          </div>
+
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user4.jpg" alt="" class="cricle">
+              <span class="dot grey"></span>
+            </div>
+            <div class="chat-message">
+              <p>Jim Connor</p>
+              <span>Is offline.</span>
+              <span class="small">offline</span>
+            </div>
+          </div>
+
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user5.jpg" alt="" class="cricle">
+              <span class="dot green"></span>
+            </div>
+            <div class="chat-message">
+              <p>Sara Lower</p>
+              <span>Sent you a message</span>
+              <span class="small">online</span>
+            </div>
+          </div>
+
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user.jpg" alt="" class="cricle">
+              <span class="dot grey"></span>
+            </div>
+            <div class="chat-message">
+              <p>Mick Pole</p>
+              <span>Is offline.</span>
+              <span class="small">offline</span>
+            </div>
+          </div>
+
+          <div class="chat-sidebar">
+            <div class="chat-img">
+              <img src="img/user3.jpg" alt="" class="cricle">
+              <span class="dot green"></span>
+            </div>
+            <div class="chat-message">
+              <p>James Tree</p>
+              <span>Awaiting your reply.</span>
+              <span class="small">online</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- Left Sidebar -->
+      <ul id="slide-out-left" class="side-nav collapsible">
+        <li>
+          <div class="sidenav-header primary-color">
+            <div class="nav-social">
+              <i class="ion-social-facebook"></i>
+              <i class="ion-social-twitter"></i>
+              <i class="ion-social-googleplus"></i>
+            </div>
+            <div class="nav-avatar">
+              <img class="circle avatar" src="img/user.jpg" alt="">
+              <div class="avatar-body">
+                <h3>KeetMalin</h3>
+                <p>Smart Wallet</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="index-drawer.html" class="no-child"><i class="ion-android-home"></i> Home </a></li>
+        <li><a href="shop.html" class="no-child"><i class="ion-android-playstore"></i> Upgrade </a></li>
+        <li><a href="video.html" class="no-child"><i class="ion-ios-videocam"></i> Product Video</a></li>
+        <li><a href="news.html" class="no-child"><i class="ion-social-rss"></i> News</a></li>
+        <li><a href="contact.html" class="no-child"><i class="ion-android-map"></i> Contact Us </a></li>
+        <li><a href="contact.html" class="no-child"><i class="ion-android-map"></i> About Us </a></li>
+      </ul>
+      <!-- End of Sidebars -->
+
+      <!-- Page Content -->
+      <div id="content">
+
+        <!-- Toolbar -->
+        <div id="toolbar" class="primary-color">
+          <div class="open-left" id="open-left" data-activates="slide-out-left">
+            <i class="ion-android-menu"></i>
+          </div>
+          <span class="title">Smart Wallet</span>
+          <div class="open-right" id="open-right" data-activates="slide-out">
+            <i class="ion-android-person"></i>
+          </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="animated fadeinup">
+          
+          <!-- Slider -->         
+          <div class="swiper-container steps">
+            <div class="swiper-wrapper slider-steps">
+              <div class="swiper-slide grey-blue">
+                <div class="swiper-slide bg-v-mobileFriendly">
+                <div class="valign-wrapper">
+                  <div class="opacity-overlay-black"></div>
+                  <div class="valign center-align p-l-r-50">
+                    <i class="ion-iphone big"></i>
+                    <h2 class="uppercase white-text">Mobile Friendly</h2>
+                    <p class="white-text">Wherever you go, your wallet is with you. The revolutionizing smart phone application allows the user to manage everything using a simple tap on the smart phone device. Your life controls, right at you palm top.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="swiper-slide grey-blue">
+                <div class="swiper-slide bg-v-financialASsistant">
+                <div class="valign-wrapper">
+                  <div class="opacity-overlay-black"></div>
+                  <div class="valign center-align p-l-r-50">
+                    <i class="ion-cash big"></i>
+                    <h2 class="uppercase">You Financial Assitant</h2>
+                    <p>Do you always worry about spending and saving your cash in a proper manner? Are you a person who tries to keep los of you day to day spendings and try to make a proper cash manager. Then this is the right device for you.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="swiper-slide grey-blue">
+                <div class="swiper-slide bg-v-lostWallet">
+                <div class="valign-wrapper">
+                  <div class="opacity-overlay-black"></div>
+                  <div class="valign center-align p-l-r-50">
+                    <i class="ion-arrow-swap big"></i>
+                    <h2 class="uppercase white-text">Always Connected</h2>
+                    <p class="white-text">Whether you are close by, or far away, we will locate your purse for you. If you are a person who has the trouble of lookinf for the misplaced wallet all the time, this is the right device for you</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="steps-controllers">
+              <!-- Add Arrows -->
+              <div><a href="index-drawer.html">SKIP</a></div>
+              <div class="swiper-button-prev">PREV</div>
+              <div class="swiper-button-next">NEXT</div>
+            </div>
+          </div>
+          <!-- End of Slider -->
+
+        </div> <!-- End of Main Contents -->
+      
+       
+      </div> <!-- End of Page Content -->
+
+    </div> <!-- End of Page Container -->
+    
+    
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.swipebox.min.js"></script>   
+    <script src="js/jquery.smoothState.min.js"></script> 
+    <script src="js/materialize.min.js"></script> 
+    <script src="js/swiper.min.js"></script>  
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/masonry.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
+</html>
