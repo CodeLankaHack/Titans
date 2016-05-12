@@ -1,0 +1,61 @@
+﻿<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html, body, #map_canvas {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+        </style>
+        <script src="cordova.js"></script>
+        <script src="scripts/platformOverrides.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script>
+            var map;
+            function initialize() {
+
+                var mapOptions = {
+                    zoom: 9,
+                    center: new google.maps.LatLng(6.990410, 81.056614),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById('map_canvas'),
+                        mapOptions);
+
+                var idx = document.URL.indexOf('?data=');
+                if (idx !== -1) {
+                    var data = document.URL.substring(idx + 6, document.URL.length);
+                    var details = data.split(':');
+
+                    var title = details[2];
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: title
+                    });
+
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(details[0], details[1]),
+                        title: title
+                    });
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+                    });
+                    marker.setMap(map);
+
+                }
+                ;
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+
+    <body>
+        <div id="map_canvas"></div>
+
+    </body>
+
+</html>
