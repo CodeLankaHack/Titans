@@ -14,7 +14,7 @@ class MoneyLog extends Eloquent{
      *
      * @var array
      */
-    protected $fillable = ['purse_id','amount','time','lat','lan','description']; 
+    protected $fillable = ['purse_id','amount','time','lat','lan','description','money']; 
 
 }
 ?>

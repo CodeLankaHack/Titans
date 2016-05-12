@@ -28,3 +28,15 @@ Route::get('logs/last','LogController@getLast');
 
 //route for retrieve all logs
 Route::get('logs/all','LogController@getAll');
+
+//route for creating moneylogs
+Route::get('moneylogs/lan/{lan}/lat/{lat}/money/{money}/purse_id/{purse_id}','MoneyLogController@store');
+
+//route for retrieve moneylogs
+Route::get('moneylogs/startdate/{startdate}/enddate/{enddate}','MoneyLogController@get');
+
+//route for retrieve moneylogs for today
+Route::get('moneylogs/today','MoneyLogController@getToday');
+
+//route for retrieve all moneylogs
+Route::get('moneylogs/all','MoneyLogController@getAll');
