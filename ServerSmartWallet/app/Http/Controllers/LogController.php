@@ -68,6 +68,27 @@ class LogController extends Controller {
         }
     }
 
+    //retrieve data between two days
+    public function get($startdate, $enddate) {
+        $result = array();
 
+        $logs = \DB::table('logs')->where('time', '>=', $startdate)
+                ->where('time', '<=', $enddate)
+                ->get();
+
+        return response()->json($logs);
+    }
+
+    //retrieve all logs
+    public function getAll() {
+        echo $_GET['callback'] . "(" . json_encode(Log::all()) . ")";
+    }
+
+    //retrieve lastLog
+    public function getLast() {
+
+        $lastLog = \Illuminate\Support\Facades\DB::table('logs')->orderBy('id', 'desc')->take(1)->get();
+        echo $_GET['callback'] . "(" .json_encode($lastLog[0]). ")";
+    }
 
 }

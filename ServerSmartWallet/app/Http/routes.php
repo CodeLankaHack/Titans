@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//route for creating users
+Route::get('users/username/{username}/password/{password}/email/{email}/repassword/{repassword}/purse_id/{purse_id}','UsersController@create');
+
+//route for login
+Route::get('users/username/{username}/password/{password}','UsersController@login');
