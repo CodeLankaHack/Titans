@@ -68,6 +68,31 @@ class MoneyLogController extends Controller {
             echo json_encode($return);
         }
     }
+    //retrieve data between two days
+    public function get($startdate, $enddate) {
+        $result = array();
 
+        $logs = \DB::table('money_logs')->where('time', '>=', $startdate)
+                ->where('time', '<=', $enddate)
+                ->get();
+
+        echo $_GET['callback'] . "(" . json_encode($logs) . ")";
+    }
+
+    //retrieve data today
+    public function getToday() {
+        $result = array();
+
+        $logs = \DB::table('money_logs')->where('time', '>=', date('Y-m-d') . ' ' . '00:00:00')
+                ->where('time', '<=', date('Y-m-d') . ' ' . '23:59:59')
+                ->get();
+
+        echo $_GET['callback'] . "(" . json_encode($logs) . ")";
+    }
+
+    //retrieve data all
+    public function getAll() {
+        echo $_GET['callback'] . "(" . json_encode(MoneyLog::all()) . ")";
+    }
 
 }
