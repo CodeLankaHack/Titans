@@ -20,6 +20,8 @@ float longitude = 0.0;
 const byte interruptPin = 2;
 String purseID = "003";
 boolean isMoneyWithdraw = false;
+int isCheckPhone = 0;
+int cPhone = 12; //to digital pin 12
 
 
 void setup() {     
@@ -29,7 +31,9 @@ void setup() {
   Serial.println("power up" );
   delay(100);
   
-  // Serial1 is GPS
+  pinMode(cPhone, INPUT); 
+  
+  // Serial is GPS
   Serial.begin(38400);
   
   // prevent controller pins 5 and 6 from interfering with the comms from GPS
@@ -99,7 +103,14 @@ void loop() {
    
   SubmitHttpRequest(sURL);
   Serial.println("SubmitHttpRequest finished");
-  delay(1000);
+  
+  isCheckPhone = digitalRead(cPhone);
+  if(isCheckPhone){
+    findPhone();
+    isCheckPhone = 0;
+  }
+  
+  delay(2000);
   
 }
 
@@ -209,6 +220,36 @@ void moneyChange() {
   Serial.println("SubmitHttpRequest Panic - finished");
   delay(100);
   
+}
+
+void findPhone(){
+  
+  Serial.println("Read Location");
+  readLocation();
+  delay(100);
+  
+  String sURL;
+  char lon[12];
+  char lat[12];
+  
+  sURL+="http://www.titansmora.org/logs/lan/";
+  for(int x=0; x<12; x++){
+    if(lon[x]!=' '){
+      sURL+=lon[x];
+    }
+  }
+  sURL+="/lat/";
+  for(int x=0; x<12; x++){
+    if(lat[x]!=' '){
+      sURL+=lat[x];
+    }
+  }
+  
+  sURL+="/event/3/purse_id/" + purseID;
+  SubmitHttpRequest(sURL);
+  Serial.println("SubmitHttpRequest Panic - finished");
+  delay(100);
+
 }
 
 
