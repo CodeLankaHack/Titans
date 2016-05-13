@@ -6,6 +6,8 @@
   <img src="http://titansmora.org/logo.png" width="350"/>
 </p>
 
+Video URL: https://youtu.be/Bgh2ffaF9Yk
+
 A stylish and handy wallet has become a part of a man’s life. It contains all of our money, identifications, credit cards and much more. What would happen to our lives, if we find our wallets being stolen by someone?. Sometimes, we all try to keep track of our cash in the purse by keeping logs and trying to maintain money in a very effective way? Haven't you found this to be extremely annoying and impractical? 
 
 Let us introduce a new generation of technology, the Smart Wallet. This is not only a handy and stylish wallet that catches the eye of everyone, it also a smart device that keeps track of your cash coming in and out of the wallet, as well as making sure that the wallet is safer with you. Any owner can easily locate the Smart Wallet just by a tap on the phone and locate it if lost or misplaced. If you are leaving your phone in a location that is not known to you, you will be immediately notified about leaving your wallet behind. If someone tries to access your wallet without your concern, you will get to know about it then and there. 
