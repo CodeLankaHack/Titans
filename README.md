@@ -6,7 +6,7 @@
   <img src="http://titansmora.org/logo.png" width="350"/>
 </p>
 
-Video URL: https://youtu.be/Bgh2ffaF9Yk
+Video URL: https://youtu.be/4lXNYgafjFE
 
 A stylish and handy wallet has become a part of a man’s life. It contains all of our money, identifications, credit cards and much more. What would happen to our lives, if we find our wallets being stolen by someone?. Sometimes, we all try to keep track of our cash in the purse by keeping logs and trying to maintain money in a very effective way? Haven't you found this to be extremely annoying and impractical? 
 
