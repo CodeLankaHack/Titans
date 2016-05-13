@@ -30,7 +30,7 @@ void setup() {
   delay(100);
   
   // Serial1 is GPS
-  Serial.begin(38400);
+  Serial1.begin(38400);
   
   // prevent controller pins 5 and 6 from interfering with the comms from GPS
   pinMode(GPS_TX_DIGITAL_OUT_PIN, INPUT);
@@ -221,9 +221,9 @@ void readLocation() {
   // For one second we parse GPS data and report some key values
   for (unsigned long start = millis(); millis() - start < 1000;)
   {
-    while (Serial.available())
+    while (Serial1.available())
     {
-      int c = Serial.read();
+      int c = Serial1.read();
       //Serial.print((char)c); // if you uncomment this you will see the raw data from the GPS
       ++chars;
       if (gps.encode(c)) // Did a new valid sentence come in?
