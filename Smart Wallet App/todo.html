@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Smart Wallet</title>
+        <meta content="IE=edge" http-equiv="x-ua-compatible">
+        <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <!-- Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <!-- Icons -->
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
+        <!-- Styles -->
+        <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+        <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+        <link href="css/swiper.css" rel="stylesheet" type="text/css">
+        <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="m-scene" id="main"> <!-- Main Container -->
+
+          <!-- Sidebars -->
+          <!-- Right Sidebar -->
+          <ul id="slide-out" class="side-nav">
+            <li class="sidenav-header">
+              <!-- Srearch bar -->
+              <nav class="transparent no-shadow">
+                <div class="nav-wrapper">
+                  <form>
+                    <div class="input-field">
+                      <input id="search" type="search" required>
+                      <label for="search"><i class="ion-android-search"></i></label>
+                      <i class="ion-android-close"></i>
+                    </div>
+                  </form>
+                </div>
+              </nav>
+            </li>
+            <!-- Tabs -->
+            <li>
+              <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#sidebar1">Social</a></li>
+                <!--<li class="tab col s3"><a href="#sidebar2">Chat</a></li>-->
+              </ul>
+            </li>
+            <li id="sidebar1" class="p-20">
+              <!-- Twitter -->
+              <div class="twitter">
+                <a href="https://twitter.com/keetmalin" ><h6 class="follow-us"><i class="ion-social-twitter"></i>Follow us on Twitter</h6></a>
+                <a class="twitter-timeline" href="https://twitter.com/keetmalin" data-widget-id="730576954663952384">Tweets by @keetmalin</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </div>
+            </li>
+
+          </ul>
+          <!-- Left Sidebar -->
+          <ul id="slide-out-left" class="side-nav collapsible">
+            <li>
+              <div class="sidenav-header primary-color">
+                <div class="nav-social">
+                  <i class="ion-social-facebook"></i>
+                  <i class="ion-social-twitter"></i>
+                  <i class="ion-social-googleplus"></i>
+                </div>
+                <div class="nav-avatar">
+                  <img class="circle avatar" src="img/user.jpg" alt="">
+                  <div class="avatar-body">
+                    <h3>User</h3>
+                    <p>Smart Wallet</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="index-drawer.html" class="no-child"><i class="ion-android-home"></i> Home </a></li>
+            <li><a href="video.html" class="no-child"><i class="ion-ios-videocam"></i> Product Video</a></li>
+            <li><a href="contact.html" class="no-child"><i class="ion-android-map"></i> Contact Us </a></li>
+            <li><a href="aboutUs.html" class="no-child"><i class="ion-ios-information"></i> About Us </a></li>
+            <li><a href="login.html" class="no-child"><i class="ion-log-out"></i> Log out</a></li>
+          </ul>
+          <!-- End of Sidebars -->
+
+            <!-- Page Content -->
+            <div id="content">
+
+                <!-- Toolbar -->
+                <div id="toolbar" class="halo-nav box-shad-none">
+                    <div class="open-left" id="open-left" data-activates="slide-out-left">
+                        <i class="ion-android-menu"></i>
+                    </div>
+                    <span class="title none">ToDo</span>
+                    <div class="open-right" id="open-right" data-activates="slide-out">
+                        <i class="ion-android-person"></i>
+                    </div>
+                </div>
+
+                <!-- Modal Structure Bottom Sheet -->
+                <div id="modal4" class="modal bottom-sheet">
+                    <div class="modal-content choose-date">
+                        <a href="#"><p id="today"><i class="ion-android-time"></i>Today</p></a>
+                        <a href="#"><p id="yesterday"><i class="ion-android-stopwatch"></i>Yesterday</p></a>
+                        <a href="#"><p id="lastweek"><i class="ion-android-watch"></i>Last week</p></a>
+                        <a href="#"><p id="lastmonth"><i class="ion-android-calendar"></i>Last month</p></a>
+                    </div>
+                </div>
+
+
+
+                <!-- Hero Header -->
+                <div class="h-banner animated fadeindown">
+                    <div class="parallax bg-5">
+                        <div class="banner-title white-text"><strong>Accounts Log</strong></div>
+                    </div>
+                </div>
+
+                <div class="todo animated fadeinup delay-1" id="loglist">
+
+                </div>
+
+                <!-- Floating Action Button -->
+                <div class="floating-button page-fab animated bouncein delay-3">
+                    <a class="btn-floating btn-large waves-effect waves-light accent-color btn z-depth-1 modal-trigger" href="#modal4">
+                        <i class="ion-android-add"></i>
+                    </a>
+                </div>
+
+              <!-- Footer -->
+              <footer class="page-footer primary-color">
+                <div class="container">
+                  <div class="row">
+                    <div class="col s12">
+                      <p class="center-align grey-text text-lighten-4"><strong>Smart Wallet</strong></p>
+                      <p class="center-align grey-text text-lighten-4">Show off, Spend easy, Live smart</p>
+
+                      <div class="center-align">
+                        <i class="ion-social-facebook m-10 white-text"></i>
+                        <i class="ion-social-twitter m-10 white-text"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright blue darken-1">
+                  <div class="container">
+                    Team Titans - University of Moratuwa
+                    <a class="grey-text text-lighten-4 right" href="#!">Privacy Policy</a>
+                  </div>
+                </div>
+              </footer>
+
+
+
+            </div> <!-- End of Page Content -->
+
+        </div> <!-- End of Page Container -->
+
+
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/jquery.swipebox.min.js"></script>   
+        <script src="js/jquery.smoothState.min.js"></script> 
+        <script src="js/materialize.min.js"></script> 
+        <script src="js/swiper.min.js"></script>  
+        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="js/masonry.min.js"></script>
+        <script src="js/chart.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script>
+            $(document).ready(function () {
+                jQuery.ajax({
+                    type: "GET",
+                    dataType: 'jsonp',
+                    url: 'http://www.titansmora.org/moneylogs/all',
+                    success: function (obj, textstatus) {
+                        $.each(obj, function (index, log) {
+                            $('#loglist').append('<p class="todo-element">' +
+                                    '<input type="checkbox" style="display:none"> <label for="todo1">' + log.description + '</label> <span>' + log.time + '</span><span>Rs.' + log.amount + '</span><span class="lat" style="display:none">' + log.lat + '</span><span class="lan" style="display:none">' + log.lan + '</span>' +
+                                    '</p>');
+                        });
+                    }
+                });
+
+            });
+        </script>
+        <script>
+            $('#today').click(function () {
+                jQuery.ajax({
+                    type: "GET",
+                    dataType: 'jsonp',
+                    url: 'http://www.titansmora.org/moneylogs/today',
+                    success: function (obj, textstatus) {
+                        $('#loglist').empty();
+                        $.each(obj, function (index, log) {
+                            $('#loglist').append('<p class="todo-element">' +
+                                    '<input type="checkbox"> <label>' + log.description + '</label> <span>' + log.time + '</span><span>Rs.' + log.amount + '</span><span class="lat" style="display:none">' + log.lat + '</span><span class="lan" style="display:none">' + log.lan + '</span>' +
+                                    '</p>');
+                        });
+                        $('#modal4').hide('fast');
+                        $('.banner-title').click();
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(document).on('click', '.todo-element', function () {
+
+                window.location = "moneylogmap.html?data=" + $(this).children('.lat').text()+":"+ $(this).children('.lan').text()+":"+ $(this).children('label').text();
+
+            });
+        </script>
+    </body>
+</html>
