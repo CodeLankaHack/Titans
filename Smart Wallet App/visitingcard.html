@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-    <title>Halo - Mobile Template</title>
-    <meta content="IE=edge" http-equiv="x-ua-compatible">
-    <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="yes" name="apple-touch-fullscreen">
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <!-- Icons -->
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all" rel="stylesheet" type="text/css">
     <!-- Styles -->
+    
     <link href="css/keyframes.css" rel="stylesheet" type="text/css">
     <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
     <link href="css/swiper.css" rel="stylesheet" type="text/css">
     <link href="css/swipebox.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-</head>
 
+    <title>NFCReader</title>
+</head>
 <body>
+
     <div class="m-scene" id="main">
         <!-- Main Container -->
         <!-- Sidebars -->
@@ -322,43 +330,116 @@
         </ul>
         <!-- End of Sidebars -->
         <!-- Page Content -->
-        <div id="content" class="grey-blue login">
+        <div id="content" class="page">
+
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="modalbtn" style="display: none">Open Modal</button>
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>NFC Writer</h4>
+                    <p id="modal-description">Waiting for NFC tag...</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
 
             <!-- Toolbar -->
-            <div id="toolbar" class="tool-login primary-color animated fadeindown">
-                <a href="javascript:history.back()" class="open-left">
-                    <i class="ion-android-arrow-back"></i>
-                </a>
+            <div id="toolbar" class="primary-color">
+                <div class="open-left" id="open-left" data-activates="slide-out-left">
+                    <i class="ion-android-menu"></i>
+                </div>
+                <span class="title">Visiting card</span>
+                <div class="open-right" id="open-right" data-activates="slide-out">
+                    <i class="ion-android-person"></i>
+                </div>
             </div>
 
             <!-- Main Content -->
-            <div class="login-form animated fadeinup delay-2 z-depth-1">
+            <div class="animated fadeinup">
 
-                <h1>Login</h1>
-                <div class="input-field">
-                    <i class="ion-android-contact prefix"></i>
-                    <input class="validate" id="login" type="text">
-                    <label for="login">Username</label>
+                <!-- Hero Header -->
+                <div class="h-banner animated fadeindown">
+                    <div class="parallax bg-6">
+                        <div class="banner-title">ToDo</div>
+                    </div>
+                </div>
+                <!-- Form Inputs -->
+                <div class="form-inputs">
+
+                    <h4 class="center">Visiting Card</h4>
+                    <div>
+                        <div class="input-field animated fadeinright">
+                            <input id="firstname" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field animated fadeinright delay-1">
+                            <input id="lastname" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                        <div class="input-field animated fadeinright delay-1">
+                            <input id="postition" type="text" class="validate">
+                            <label for="postition">Designation</label>
+                        </div>
+                    </div>
+                    <div class="input-field animated fadeinright delay-2">
+                        <input id="email" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field animated fadeinright delay-3">
+                        <input id="telephone" type="text" class="validate">
+                        <label for="telephone">Telephone(Residential)</label>
+                    </div>
+                    <div class="input-field animated fadeinright delay-3">
+                        <input id="mobile" type="text" class="validate">
+                        <label for="mobile">Mobile</label>
+                    </div>
+                    <div class="input-field animated fadeinright delay-4">
+                        <input id="city" type="text" class="validate">
+                        <label for="city">Address</label>
+                    </div>
+                    <div class="input-field animated fadeinright delay-4">
+                        <input id="website" type="text" class="validate">
+                        <label for="website">Web site</label>
+                    </div>
+
+                    <button class="waves-effect waves-light btn-large primary-color width-100 animated bouncein delay-6" id="save">Save</button>
+                    <a class="waves-effect waves-light btn-large modal-trigger primary-color width-100 m-b-20" href="#modal1" style="display:none" id="modalBtn">Modal simple</a>
                 </div>
 
-                <div class="input-field" style="margin-bottom:20px;">
-                    <i class="ion-android-lock prefix"></i>
-                    <input class="validate" id="login-psw" type="password">
-                    <label for="login-psw">Password</label>
-                </div>
+                <!-- Footer -->
+                <footer class="page-footer primary-color">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="center-align">
+                                    <i class="ion-social-facebook m-10 white-text"></i>
+                                    <i class="ion-social-twitter m-10 white-text"></i>
+                                    <i class="ion-social-pinterest m-10 white-text"></i>
+                                    <i class="ion-social-dribbble m-10 white-text"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright blue darken-1">
+                        <div class="container">
+                            2016 Titans
+                        </div>
+                    </div>
+                </footer>
 
-                <a class="waves-effect waves-light btn-large accent-color width-100 m-b-20 animated bouncein delay-4" id="loginButton">Login</a>
-                <span>Don't have an account? <a class="primary-text" href="signup.html">Sign Up</a></span><br>
-                <span>Forgot you password? <a class="primary-text" href="forgot.html">Reset Password</a></span>
-            </div><!-- End of Main Contents -->
+            </div> <!-- End of Main Contents -->
 
 
         </div> <!-- End of Page Content -->
 
     </div> <!-- End of Page Container -->
-
-
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modal.js"></script>
+
     <script src="js/jquery.swipebox.min.js"></script>
     <script src="js/jquery.smoothState.min.js"></script>
     <script src="js/materialize.min.js"></script>
@@ -367,23 +448,6 @@
     <script src="js/masonry.min.js"></script>
     <script src="js/chart.min.js"></script>
     <script src="js/functions.js"></script>
-    <script>
-            //retrive login details
-            $('#loginButton').click(function () {
-                var username = $('#login').val();
-                var password = $('#login-psw').val();
-                window.location = "index-drawer.html";
-                jQuery.ajax({
-                    type: "GET",
-                    dataType: 'jsonp',
-                    url: 'http://www.titansmora.org/users/username/' + username + '/password/' + password,
-                    success: function (obj, textstatus) {
-                        if(obj!='Failed'){
-                            window.location = "index-drawer.html?purse_id="+obj;
-                        }
-                    }
-                });
-            });
-    </script>
+
 </body>
 </html>

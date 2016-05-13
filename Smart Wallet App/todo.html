@@ -172,9 +172,12 @@
                     url: 'http://www.titansmora.org/moneylogs/all',
                     success: function (obj, textstatus) {
                         $.each(obj, function (index, log) {
-                            $('#loglist').append('<p class="todo-element">' +
+                            if (log.description != null) {
+                                $('#loglist').append('<p class="todo-element">' +
                                     '<input type="checkbox" style="display:none"> <label for="todo1">' + log.description + '</label> <span>' + log.time + '</span><span>Rs.' + log.amount + '</span><span class="lat" style="display:none">' + log.lat + '</span><span class="lan" style="display:none">' + log.lan + '</span>' +
                                     '</p>');
+                            }
+                            
                         });
                     }
                 });
@@ -190,9 +193,12 @@
                     success: function (obj, textstatus) {
                         $('#loglist').empty();
                         $.each(obj, function (index, log) {
-                            $('#loglist').append('<p class="todo-element">' +
+                            if (log.description !== null) {
+                                $('#loglist').append('<p class="todo-element">' +
                                     '<input type="checkbox"> <label>' + log.description + '</label> <span>' + log.time + '</span><span>Rs.' + log.amount + '</span><span class="lat" style="display:none">' + log.lat + '</span><span class="lan" style="display:none">' + log.lan + '</span>' +
                                     '</p>');
+                            }
+                            
                         });
                         $('#modal4').hide('fast');
                         $('.banner-title').click();
